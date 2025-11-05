@@ -4,8 +4,8 @@
     position: relative;
     background-color: bisque;
     border-radius: 1px;
-    border-color: pink;
-    box-shadow: 0px 0px 0px 1px pink;
+    border-color: red;
+    box-shadow: 0px 0px 0px 1px red;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     transform: skewY(-2deg);
@@ -17,8 +17,8 @@
     height: 80vh;
     background-color: #f0f0f0;
     border-radius: 1px;
-    border-color: pink;
-    box-shadow: 0px 0px 0px 1px pink;
+    border-color: red;
+    box-shadow: 0px 0px 0px 1px red;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -75,7 +75,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: pink;
+    background-color: red;
 }
 
 header {
@@ -85,7 +85,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: pink;
+    background-color: red;
 }
 
 .header-content {
@@ -101,7 +101,7 @@ header {
     justify-content: center;
     align-items: center;
     perspective: 300vw;
-    background-color: pink;
+    background-color: red;
 }
 
 p,
