@@ -4,11 +4,10 @@
     position: relative;
     background-color: bisque;
     border-radius: 1px;
-    border-color: red;
-    box-shadow: 0px 0px 0px 1px red;
+    border-color: white;
+    box-shadow: 0px 0px 0px 1px white;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    transform: skewY(-2deg);
     transform-style: preserve-3d;
 }
 
@@ -17,8 +16,8 @@
     height: 85vh;
     background-color: #f0f0f0;
     border-radius: 1px;
-    border-color: red;
-    box-shadow: 0px 0px 0px 1px red;
+    border-color: white;
+    box-shadow: 0px 0px 0px 1px white;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -75,7 +74,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: white;
 }
 
 .header-content {
@@ -100,7 +99,7 @@ body {
     justify-content: center;
     align-items: center;
     perspective: 300vw;
-    background-color: red;
+    background-color: white;
 }
 
 p,
@@ -167,3 +166,22 @@ span {
      transform: translateY(105vh) translateX(10vw); 
   }
 } 
+
+
+.fun-bride-groom {
+    position: relative;
+    width: 100vw;
+    height: 4vh;
+}
+
+.fun-bride {
+    position: absolute;
+    left: 3%;
+    bottom: 0;
+}
+
+.fun-groom {
+    position: absolute;
+    right: 3%;
+    bottom: 0;
+}
