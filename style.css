@@ -1,6 +1,6 @@
 .book {
     width: 90vw;
-    height: 90vh;
+    height: 87vh;
     position: relative;
     background-color: bisque;
     border-radius: 1px;
@@ -14,7 +14,7 @@
 
 .page {
     width: 90vw;
-    height: 90vh;
+    height: 87vh;
     background-color: #f0f0f0;
     border-radius: 1px;
     border-color: red;
