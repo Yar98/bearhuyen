@@ -100,6 +100,8 @@ body {
     align-items: center;
     perspective: 300vw;
     background-color: white;
+    animation: slope 3s 1 forwards;
+    animation-delay: 2s;
 }
 
 p,
@@ -112,7 +114,6 @@ span {
 
 .cover-image {
     position: relative;
-
 }
 
 .main-cover-image {
@@ -149,6 +150,12 @@ span {
     border-top-right-radius: 30px;
 }
 
+.second-cover-image{
+    background-image: url(LAEM.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .heart {
   position: fixed;
@@ -178,10 +185,70 @@ span {
     position: absolute;
     left: 3%;
     bottom: 0;
+    animation: bride-down 2s 1 forwards;
+    animation-delay: 2s;
 }
 
 .fun-groom {
     position: absolute;
     right: 3%;
     bottom: 0;
+    transform-origin: 0 100%;
+    animation: groom-up 3s ease-in-out 1 forwards;
+    animation-delay: 2s;
+}
+
+.fun-family {
+    position: absolute;
+    right: 3%;
+    bottom: 0;
+    opacity: 0;
+    animation:family-appear 3s 1 forwards;
+    animation-delay: 5s;
+}
+
+@keyframes slope {
+  from {
+     transform: skewY(0); 
+  }
+  to {
+     transform: skewY(-4deg); 
+  }
+} 
+
+@keyframes bride-down {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(20%);
+    }
+}
+
+@keyframes groom-up {
+    0% {
+        bottom: 0;
+    }
+    25% {
+        transform: rotate(-90deg);
+        right: 10vw;
+    }
+    90% {
+        transform: rotate(-100deg);
+        right: 60vw;
+        bottom: -1vh;
+    }
+    100% {
+        transform: translateY(20%);
+        right: 79vw;
+    }
+}
+
+@keyframes family-appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100%;
+    }
 }
