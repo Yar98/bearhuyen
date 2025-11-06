@@ -5,11 +5,11 @@
     transform-style: preserve-3d;
     background-color: bisque;
     
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
     border-color: #FFE2E2;
-    box-shadow: 5px 5px 30px #810000;
-    border-left: 3px dashed #810000;
+    box-shadow: 5px 5px 30px #FFFFFF;
+    border-left: 4px dashed #810000;
 }
 
 .page {
@@ -69,7 +69,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFC7C7;
+    background-color: #810000;
 }
 
 .header-content {
@@ -93,7 +93,7 @@ body {
     justify-content: center;
     align-items: center;
     perspective: 300vw;
-    background-color: #FFC7C7;
+    background-color: #810000;
     animation: slope 3s 1 forwards;
     animation-delay: 2s;
 }
