@@ -38,6 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  setInterval(createHeart, 300);
+  setInterval(createHeart, 700);
 })
 
