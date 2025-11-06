@@ -16,6 +16,9 @@
     width: 90vw;
     height: 82vh;
     background-color: #f0f0f0;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-color: #FFE2E2;
 }
 
 .book .page {
@@ -124,6 +127,9 @@ span {
     background: url(white-main-cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-color: #FFE2E2;
 }
 
 .main-cover-image::after {
@@ -133,6 +139,9 @@ span {
     z-index: -1;
     opacity: 50%;
     background: #FFE2E2;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-color: #FFE2E2;
 }
 
 .sub-cover-image {
