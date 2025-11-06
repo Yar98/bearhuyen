@@ -2,24 +2,20 @@
     width: 90vw;
     height: 85vh;
     position: relative;
+    transform-style: preserve-3d;
     background-color: bisque;
-    border-radius: 1px;
-    border-color: white;
-    box-shadow: 0px 0px 0px 1px white;
+    
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    transform-style: preserve-3d;
+    border-color: #FFE2E2;
+    box-shadow: 10px 10px 10px 7px #FFE2E2;
+    border-left: 3px dashed #810000;
 }
 
 .page {
     width: 90vw;
     height: 85vh;
     background-color: #f0f0f0;
-    border-radius: 1px;
-    border-color: white;
-    box-shadow: 0px 0px 0px 1px white;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
 }
 
 .book .page {
@@ -69,12 +65,11 @@ html {
 
 body {
     min-height: 100%;
-    background: #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #FFC7C7;
 }
 
 .header-content {
@@ -94,12 +89,11 @@ body {
 .main-content {
     height: 100%;
     width: 100%;
-    background: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     perspective: 300vw;
-    background-color: white;
+    background-color: #FFC7C7;
     animation: slope 3s 1 forwards;
     animation-delay: 2s;
 }
@@ -109,45 +103,54 @@ span {
     font-family: 'Lovers Quarrel', cursive;
     text-align: center;
     font-size: 8vh;
-    color: #000000;
+    color: #CE1212;
 }
 
-.cover-image {
-    position: relative;
+.introduction-content{
+    position: absolute;
+    top: 0;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-cover-image {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
-    background-image: url(IMG.jpg);
+    isolation: isolate;
+    background: url(white-main-cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 1px;
-    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    opacity: 25%;
+}
+
+.main-cover-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 50%;
+    background: #FFE2E2;
 }
 
 .sub-cover-image {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40%;
+    height: 47%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .sub-cover-image-a {
-    width: 55%;
+    width: 60%;
     height: 100%;
-    background-image: url(LAEM.jpg);
+    background-image: url(sub-red-cover-removebg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
 }
 
 .second-cover-image{
