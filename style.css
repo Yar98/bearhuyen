@@ -1,6 +1,6 @@
 .book {
     width: 90vw;
-    height: 82vh;
+    height: 147vw;
     position: relative;
     transform-style: preserve-3d;
     background-color: bisque;
@@ -14,7 +14,7 @@
 
 .page {
     width: 90vw;
-    height: 82vh;
+    height: 147vw;
     background-color: #f0f0f0;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -105,7 +105,7 @@ p,
 span {
     font-family: 'Lovers Quarrel', cursive;
     text-align: center;
-    font-size: 8vh;
+    font-size: 17vw;
     color: #CE1212;
 }
 
