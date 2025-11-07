@@ -1,6 +1,6 @@
 .book {
     width: 90vw;
-    height: 150vw;
+    height: 153vw;
     position: relative;
     transform-style: preserve-3d;
     background-color: bisque;
@@ -14,7 +14,7 @@
 
 .page {
     width: 90vw;
-    height: 150vw;
+    height: 153vw;
     background-color: #f0f0f0;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
