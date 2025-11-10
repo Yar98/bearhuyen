@@ -140,6 +140,7 @@ body {
     background: url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: clip;
 }
 
 .header-content {
