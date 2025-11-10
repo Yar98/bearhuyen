@@ -1,24 +1,88 @@
-.book {
-    width: 90vw;
-    height: 155vw;
-    position: relative;
-    transform-style: preserve-3d;
-    background-color: bisque;
-    
+.book,
+.page,
+.main-content,
+.main-cover-image,
+.main-cover-image::after,
+#last-page,
+#second-page {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     border-color: #FFE2E2;
-    box-shadow: 5px 5px 30px #FFFFFF;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.book,
+.page,
+#last-page,
+#second-page {
+    width: 90vw;
+    height: 155vw;
+    background-color: rgba(129, 0, 0, 0);
+}
+
+p,
+span {
+    font-family: 'Lovers Quarrel', cursive;
+    text-align: center;
+    font-size: 17vw;
+    color: #CE1212;
+}
+
+.time-text {
+    position: absolute;
+    top: -6vw;
+    width: 90vw;
+    height: 140vw;
+}
+
+.book {
+    position: relative;
+    transform-style: preserve-3d;
+    background-color: rgba(129, 0, 0, 0);
+    box-shadow: rgba(129, 0, 0, 0.3) 5px 5px, rgba(129, 0, 0, 0.3) 10px 10px, rgba(129, 0, 0, 0.2) 15px 15px, rgba(129, 0, 0, 0.1) 20px 20px, rgba(129, 0, 0, 0.05) 25px 25px;
     border-left: 4px dashed #810000;
 }
 
-.page {
-    width: 90vw;
-    height: 155vw;
-    background-color: #f0f0f0;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    border-color: #FFE2E2;
+#second-page {
+    background-color: rgb(47, 6, 6);
+    position: relative;
+    background-image: url(second-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#last-page {
+    position: absolute;
+    top: 0;
+}
+
+.time-text p {
+    line-height: 11vw;
+}
+
+.address-text {
+    position: absolute;
+    bottom: 1vw;
+    font-size: 8vw;
+}
+
+.sub-address-text {
+    width: 80%;
+}
+
+.sub-address-text-a {
+    font-size: 5vw;
+}
+
+#last-page,
+#second-page,
+.address-text,
+.sub-address-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .book .page {
@@ -72,7 +136,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #810000;
+    background-color: #EEEBDD;
+    background: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header-content {
@@ -85,31 +152,22 @@ body {
     gap: 2vw;
 }
 
-.header-content img{
+.header-content img {
     transform: translateX(8%);
 }
 
 .main-content {
     height: 100%;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     perspective: 300vw;
-    background-color: #810000;
+    background-color: #810000 rgba(129, 0, 0, 0);
     animation: slope 3s 1 forwards;
     animation-delay: 2s;
 }
 
-p,
-span {
-    font-family: 'Lovers Quarrel', cursive;
-    text-align: center;
-    font-size: 17vw;
-    color: #CE1212;
-}
-
-.introduction-content{
+.introduction-content {
     position: absolute;
     top: 0;
     width: 90vw;
@@ -117,6 +175,21 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .main-cover-image {
@@ -127,9 +200,6 @@ span {
     background: url(white-main-cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    border-color: #FFE2E2;
 }
 
 .main-cover-image::after {
@@ -138,10 +208,7 @@ span {
     inset: 0;
     z-index: -1;
     opacity: 50%;
-    background: #FFE2E2;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    border-color: #FFE2E2;
+    background: white;
 }
 
 .sub-cover-image {
@@ -162,29 +229,23 @@ span {
     background-size: cover;
 }
 
-.second-cover-image{
-    background-image: url(LAEM.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 .heart {
-  position: fixed;
-  font-size: 1.5rem;
-  top: -1vh;
-  transform: translateY(0);
-  animation: fall 3s linear forwards;
+    position: fixed;
+    font-size: 1.5rem;
+    top: -1vh;
+    transform: translateY(0);
+    animation: fall 3s linear forwards;
 }
 
 @keyframes fall {
-  from {
-     transform: translateY(0vh) translateX(-10vw); 
-  }
-  to {
-     transform: translateY(105vh) translateX(10vw); 
-  }
-} 
+    from {
+        transform: translateY(0vh) translateX(-10vw);
+    }
+
+    to {
+        transform: translateY(105vh) translateX(10vw);
+    }
+}
 
 
 .fun-bride-groom {
@@ -195,7 +256,7 @@ span {
 
 .fun-bride {
     position: absolute;
-    left: 3%;
+    left: 12%;
     bottom: 0;
     animation: bride-down 2s 1 forwards;
     animation-delay: 2s;
@@ -215,23 +276,25 @@ span {
     right: 3%;
     bottom: 0;
     opacity: 0;
-    animation:family-appear 3s 1 forwards;
+    animation: family-appear 3s 1 forwards;
     animation-delay: 5s;
 }
 
 @keyframes slope {
-  from {
-     transform: skewY(0); 
-  }
-  to {
-     transform: skewY(-4deg); 
-  }
-} 
+    from {
+        transform: skewY(0);
+    }
+
+    to {
+        transform: skewY(-4deg);
+    }
+}
 
 @keyframes bride-down {
     from {
         transform: translateY(0);
     }
+
     to {
         transform: translateY(20%);
     }
@@ -241,26 +304,30 @@ span {
     0% {
         bottom: 0;
     }
+
     25% {
         transform: rotate(-90deg);
         right: 10vw;
     }
+
     90% {
         transform: rotate(-100deg);
-        right: 60vw;
+        right: 50vw;
         bottom: -1vh;
     }
+
     100% {
         transform: translateY(20%);
-        right: 79vw;
+        right: 69vw;
     }
 }
 
 @keyframes family-appear {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 100%;
     }
 }

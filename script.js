@@ -38,6 +38,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  var lastPage = document.getElementById('last-page');
+  lastPage.onclick = function () {
+    for (var i = 0; i < pages.length; i++) {
+      pages[i].classList.remove('flipped');
+    }
+  }
+
   setInterval(createHeart, 700);
 })
 
