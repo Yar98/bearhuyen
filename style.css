@@ -64,7 +64,11 @@ span {
 .address-text {
     position: absolute;
     bottom: 1vw;
-    font-size: 8vw;
+    font-size: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
 }
 
 .sub-address-text {
@@ -75,9 +79,12 @@ span {
     font-size: 5vw;
 }
 
+.sub-address-text-b{
+    font-size: 5vw;
+}
+
 #last-page,
 #second-page,
-.address-text,
 .sub-address-text {
     display: flex;
     flex-direction: column;
@@ -140,7 +147,7 @@ body {
     background: url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: clip;
+    overflow: hidden;
 }
 
 .header-content {
