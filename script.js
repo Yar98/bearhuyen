@@ -28,14 +28,14 @@ function fadeOut(fadeTarget) {
   if (imgIndex > images.length) imgIndex = 0;
   if (!fadeTarget.style.opacity) {
     fadeTarget.style.opacity = 1;
-    fadeTarget.style.backgroundImage = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page/" + images[imgIndex++] + "')";
+    fadeTarget.style.backgroundImage = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page-opti/" + images[imgIndex++] + "')";
   }
   if (fadeTarget.style.opacity < 0) {
-    fadeTarget.style.backgroundImage = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page/" + images[imgIndex++] + "')";
+    fadeTarget.style.backgroundImage = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page-opti/" + images[imgIndex++] + "')";
     fadeTarget.style.opacity = 0;
     isDown = false;
   } else if (fadeTarget.style.opacity > 1) {
-    //fadeTarget.style.backgroundImage = "url('./third-page/" + images[imgIndex++] + "')";
+    //fadeTarget.style.backgroundImage = "url('./third-page-opti/" + images[imgIndex++] + "')";
     fadeTarget.style.opacity = 1.01;
     isDown = true;
     delayFlag += 1;
