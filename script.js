@@ -20,7 +20,7 @@ function createHeart() {
 }
 
 function fadeOut(fadeTarget) {
-  if (delayFlag > 0 && delayFlag < 20) {
+  if (delayFlag > 0 && delayFlag < 150) {
     delayFlag += 1;
     return;
   }
@@ -36,15 +36,15 @@ function fadeOut(fadeTarget) {
     isDown = false;
   } else if (fadeTarget.style.opacity > 1) {
     //fadeTarget.style.backgroundImage = "url('./third-page/" + images[imgIndex++] + "')";
-    fadeTarget.style.opacity = 1.1;
+    fadeTarget.style.opacity = 1.01;
     isDown = true;
     delayFlag += 1;
   }
   if (isDown) {
-    fadeTarget.style.opacity = parseFloat(fadeTarget.style.opacity) - 0.1;
+    fadeTarget.style.opacity = parseFloat(fadeTarget.style.opacity) - 0.01;
   }
   else {
-    fadeTarget.style.opacity = parseFloat(fadeTarget.style.opacity) + 0.1;
+    fadeTarget.style.opacity = parseFloat(fadeTarget.style.opacity) + 0.01;
   }
 }
 
@@ -87,6 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var fadeTarget = document.getElementById("third-page-cover");
   var secondFadeTarget = document.getElementById("my-quote");
 
-  setInterval(function () { multipleFadeOut(fadeTarget, secondFadeTarget) }, 200);
+  setInterval(function () { multipleFadeOut(fadeTarget, secondFadeTarget) }, 20);
 })
 
