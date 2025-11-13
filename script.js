@@ -20,7 +20,7 @@ function createHeart() {
 }
 
 function fadeOut(fadeTarget) {
-  if (delayFlag > 0 && delayFlag < 10) {
+  if (delayFlag > 0 && delayFlag < 20) {
     delayFlag += 1;
     return;
   }
