@@ -4,7 +4,8 @@
 .main-cover-image,
 .main-cover-image::after,
 #last-page,
-#second-page {
+#second-page,
+#third-page-cover {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     border-color: #FFE2E2;
@@ -14,8 +15,12 @@
 
 .book,
 .page,
+.main-content,
 #last-page,
-#second-page {
+#second-page,
+#third-page,
+#third-page-cover,
+#my-quote {
     width: 90vw;
     height: 155vw;
     background-color: rgba(129, 0, 0, 0);
@@ -27,6 +32,26 @@ span {
     text-align: center;
     font-size: 17vw;
     color: #CE1212;
+}
+
+.book .page,
+#last-page,
+#second-page,
+.sub-address-text,
+#my-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book .page {
+    position: absolute;
+    top: 0;
+    transform-origin: 0 0;
+    transition: transform 1.1s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 .time-text {
@@ -52,9 +77,37 @@ span {
     background-size: cover;
 }
 
+#third-page {
+    background-color: white;
+}
+
+#third-page-cover {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#my-quote {
+    position: absolute;
+}
+
 #last-page {
     position: absolute;
     top: 0;
+    z-index: -99;
+}
+
+#frog {
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    left: 0;
+    bottom: 1vw;
+    background-image: url(./zabka.gif);
+    background-color: rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .time-text p {
@@ -82,27 +135,12 @@ span {
     font-weight: lighter;
 }
 
-.sub-address-text-b{
+.sub-address-text-b {
     font-size: 5vw;
     font-weight: lighter;
 }
 
-#last-page,
-#second-page,
-.sub-address-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.book .page {
-    position: absolute;
-    transform-origin: 0 0;
-    transition: transform 1.1s;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-}
 
 .book .page:nth-child(odd) {
     transform: rotateY(0deg);
@@ -170,9 +208,6 @@ body {
 
 .main-content {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     perspective: 300vw;
     background-color: #810000 rgba(129, 0, 0, 0);
     animation: slope 3s 1 forwards;
