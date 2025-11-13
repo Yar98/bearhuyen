@@ -17,21 +17,11 @@
 .page,
 .main-content,
 #last-page,
-#second-page,
-#third-page,
 #third-page-cover,
 #my-quote {
     width: 90vw;
     height: 155vw;
-    background-color: rgba(129, 0, 0, 0);
-}
-
-p,
-span {
-    font-family: 'Lovers Quarrel', cursive;
-    text-align: center;
-    font-size: 17vw;
-    color: #CE1212;
+    background-color: rgba(255, 245, 245, 0);
 }
 
 .book .page,
@@ -54,13 +44,6 @@ span {
     transform-style: preserve-3d;
 }
 
-.time-text {
-    position: absolute;
-    top: -6vw;
-    width: 90vw;
-    height: 140vw;
-}
-
 .book {
     position: relative;
     transform-style: preserve-3d;
@@ -70,7 +53,7 @@ span {
 }
 
 #second-page {
-    background-color: rgb(47, 6, 6);
+    background-color: rgba(255, 255, 255, 0);
     position: relative;
     background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/second-page-opti/second-page.jpg);
     background-repeat: no-repeat;
@@ -88,9 +71,7 @@ span {
     background-size: cover;
 }
 
-#my-quote {
-    position: absolute;
-}
+
 
 #last-page {
     position: absolute;
@@ -108,6 +89,25 @@ span {
     background-color: rgba(255, 255, 255, 0);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+p,
+span {
+    font-family: 'Lovers Quarrel', cursive;
+    text-align: center;
+    font-size: 17vw;
+    color: #CE1212;
+}
+
+#my-quote {
+    position: absolute;
+}
+
+.time-text {
+    position: absolute;
+    top: -6vw;
+    width: 90vw;
+    height: 140vw;
 }
 
 .time-text p {
@@ -139,8 +139,6 @@ span {
     font-size: 5vw;
     font-weight: lighter;
 }
-
-
 
 .book .page:nth-child(odd) {
     transform: rotateY(0deg);
@@ -376,5 +374,102 @@ body {
 
     to {
         opacity: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .book,
+    .page,
+    .main-content,
+    .main-cover-image,
+    .main-cover-image::after,
+    #last-page,
+    #second-page,
+    #third-page-cover {
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        border-color: #FFE2E2;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .book,
+    .main-content,
+    .page,
+    #third-page-cover,
+    #last-page{
+        height: 53vw;
+    }
+
+    .book,
+    .main-content {
+        width: 80vw;
+        animation: none;
+        border-left: none;
+    }
+
+    .page,
+    #third-page-cover,
+    #last-page {
+        width: 40vw;
+        right: 0;
+        border-left: 4px dashed #810000;
+    }
+
+    #second-page {
+        position: absolute;
+    }
+
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        background-image: url(./landscape/background.jpg);
+    }
+
+    .fun-bride-groom {
+        display: none;
+    }
+
+    p,
+    span {
+        font-family: 'Lovers Quarrel', cursive;
+        text-align: center;
+        font-size: 1vw;
+        color: #CE1212;
+    }
+
+    #my-quote {
+        position: absolute;
+    }
+
+    .time-text {
+        position: absolute;
+        top: -6vw;
+        width: 9vw;
+        height: 1vw;
+    }
+
+    .time-text p {
+        line-height: 1vw;
+    }
+
+    .address-text {
+        font-size: 1vw;
+    }
+
+    .sub-address-text {
+        width: 80%;
+    }
+
+    .sub-address-text-a {
+        font-size: 1vw;
+        font-weight: lighter;
+    }
+
+    .sub-address-text-b {
+        font-size: 1vw;
+        font-weight: lighter;
     }
 }

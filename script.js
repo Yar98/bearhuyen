@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  setInterval(createHeart, 700);
+  //setInterval(createHeart, 700);
 
   var fadeTarget = document.getElementById("third-page-cover");
   var secondFadeTarget = document.getElementById("my-quote");
