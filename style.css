@@ -25,6 +25,7 @@
 }
 
 .book .page,
+.main-cover-image,
 #last-page,
 #second-page,
 .sub-address-text,
@@ -270,9 +271,14 @@ body {
 .sub-cover-image-a {
     width: 90%;
     height: 150%;
-    background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/first-page-opti/sub-red-cover-removebgv1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+}
+
+.sub-cover-image-a img {
+    position: absolute;
+    width: 84.6%;
+    height: 109.1%;
+    bottom: 12.1%;
+    left: 7.4%;
 }
 
 .introduction-content p {
@@ -504,10 +510,22 @@ body {
         background-image: url(./landscape/background.jpg);
     }
 
+    .introduction-content,
     .sub-cover-image {
-        bottom: -5%;
-        left: -6%;
-        height: 70%;
+        position: static;
+    }
+
+    .sub-cover-image-a {
+        height: 100%;
+        width: 80%;
+    }
+
+    .sub-cover-image-a img {
+        position: absolute;
+        width: 67.9%;
+        height: 90%;
+        bottom: -7.4%;
+        left: 9.1%;
     }
 
     .fun-bride-groom {
