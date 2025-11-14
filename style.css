@@ -276,7 +276,7 @@ body {
 
 .heart {
     position: fixed;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     top: -1vh;
     transform: translateY(0);
     animation: fall 3s linear forwards;
@@ -477,15 +477,15 @@ body {
         background-size: cover;
     }
 
-    #first-page-back{
+    #first-page-back {
         background-image: url(./even-page/LAEM7074.jpg);
     }
 
-    #second-page-back{
+    #second-page-back {
         background-image: url(./even-page/LAEM7093.jpg);
     }
 
-    #third-page-back{
+    #third-page-back {
         background-image: url(./even-page/LAEM7103.jpg);
     }
 
