@@ -56,7 +56,7 @@
 #second-page {
     background-color: rgba(255, 255, 255, 0);
     position: relative;
-    background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/second-page-opti/second-page.jpg);
+    background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/second-page-opti/second-page.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -243,7 +243,7 @@ body {
     width: 100%;
     height: 100%;
     isolation: isolate;
-    background: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/first-page-opti/white-main-cover.jpg);
+    background: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/first-page-opti/white-main-cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -492,22 +492,22 @@ body {
     }
 
     #first-page-back {
-        background-image: url(./even-page/LAEM7074.jpg);
+        background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/even-page/LAEM7074.jpg);
     }
 
     #second-page-back {
-        background-image: url(./even-page/LAEM7093.jpg);
+        background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/even-page/LAEM7093.jpg);
     }
 
     #third-page-back {
-        background-image: url(./even-page/LAEM7103.jpg);
+        background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/even-page/LAEM7103.jpg);
     }
 
     body {
         background-repeat: round;
         background-size: cover;
         overflow: hidden;
-        background-image: url(./landscape/background.jpg);
+        background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/landscape/background.jpg);
     }
 
     .introduction-content,
@@ -529,7 +529,7 @@ body {
     }
 
     #second-page {
-        background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/second-page/second-page.jpg);
+        background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/second-page/second-page.jpg);
     }
 
     .fun-bride-groom {

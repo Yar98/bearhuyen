@@ -3,8 +3,8 @@ var images = ['LAEM7099.jpg', 'LAEM7079.jpg', 'LAEM6989.jpg', 'LAEM6976.jpg', 'I
 var imgIndex = 0;
 var delayFlag = 0;
 var curWidth = window.innerWidth;
-var prefixPro = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page/";
-var prefixOpti = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page-opti/";
+var prefixPro = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/third-page/";
+var prefixOpti = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/third-page-opti/";
 var prefix = prefixOpti;
 
 if (curWidth > 700) {
