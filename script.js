@@ -9,7 +9,8 @@ var prefix = prefixOpti;
 
 if (curWidth > 700) {
   prefix = prefixPro;
-  images.map((value) => preloadImage(prefix + value + "')"));
+  images.map((value) => preloadImage(prefix + value));
+  preloadImage(prefix + "second-page.jpg");
 }
 
 function preloadImage(url) {
