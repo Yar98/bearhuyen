@@ -11,6 +11,9 @@ if (curWidth > 700) {
   prefix = prefixPro;
   images.map((value) => preloadImage(prefix + value));
   preloadImage(prefix + "second-page.jpg");
+  preloadImage(prefix + "LAEM7074.jpg");
+  preloadImage(prefix + "LAEM7093.jpg");
+  preloadImage(prefix + "LAEM7103.jpg");
 }
 
 function preloadImage(url) {
