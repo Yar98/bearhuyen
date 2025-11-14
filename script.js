@@ -2,6 +2,20 @@ var isDown = true;
 var images = ['LAEM7099.jpg', 'LAEM7079.jpg', 'LAEM6989.jpg', 'LAEM6976.jpg', 'IMG_2404.jpg', 'IMG_2316.jpg', 'IMG_1928.jpg', 'IMG_2072.jpg'];
 var imgIndex = 0;
 var delayFlag = 0;
+var curWidth = window.innerWidth;
+var prefixPro = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page/";
+var prefixOpti = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page-opti/";
+var prefix = prefixOpti;
+
+if (curWidth > 700) {
+  prefix = prefixPro;
+  images.map((value) => preloadImage(prefix + value + "')"));
+}
+
+function preloadImage(url) {
+  var img = new Image();
+  img.src = url;
+}
 
 function createHeart() {
   const heart = document.createElement('div');
@@ -28,10 +42,10 @@ function fadeOut(fadeTarget) {
   if (imgIndex > images.length) imgIndex = 0;
   if (!fadeTarget.style.opacity) {
     fadeTarget.style.opacity = 1;
-    fadeTarget.style.backgroundImage = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page-opti/" + images[imgIndex++] + "')";
+    fadeTarget.style.backgroundImage = prefix + images[imgIndex++] + "')";
   }
   if (fadeTarget.style.opacity < 0) {
-    fadeTarget.style.backgroundImage = "url('https://cdn.jsdelivr.net/gh/yar98/bearhuyen/third-page-opti/" + images[imgIndex++] + "')";
+    fadeTarget.style.backgroundImage = prefix + images[imgIndex++] + "')";
     fadeTarget.style.opacity = 0;
     isDown = false;
   } else if (fadeTarget.style.opacity > 1) {
@@ -82,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  //setInterval(createHeart, 700);
+  setInterval(createHeart, 700);
 
   var fadeTarget = document.getElementById("third-page-cover");
   var secondFadeTarget = document.getElementById("my-quote");

@@ -1,4 +1,3 @@
-
 .book,
 .page,
 .main-content,
@@ -49,7 +48,7 @@
     position: relative;
     transform-style: preserve-3d;
     background-color: rgba(129, 0, 0, 0);
-    box-shadow: rgba(129, 0, 0, 0.3) 5px 5px, rgba(129, 0, 0, 0.3) 10px 10px, rgba(129, 0, 0, 0.2) 15px 15px, rgba(129, 0, 0, 0.1) 20px 20px, rgba(129, 0, 0, 0.05) 25px 25px;
+    box-shadow: rgba(129, 0, 0, 0.3) 2px 2px, rgba(129, 0, 0, 0.3) 4px 4px, rgba(129, 0, 0, 0.2) 8px 8px, rgba(129, 0, 0, 0.1) 13px 13px, rgba(129, 0, 0, 0.05) 16px 16px;
     border-left: 2px dashed #810000;
 }
 
@@ -272,7 +271,7 @@ body {
     height: 100%;
     background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/first-page-opti/sub-red-cover-removebgv1.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .heart {
@@ -358,7 +357,7 @@ body {
 
     90% {
         transform: rotate(-100deg);
-        right: 50vw;
+        right: 43vw;
         bottom: -1vh;
     }
 
@@ -379,27 +378,36 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-    .book,
-    .page,
-    .main-content,
-    .main-cover-image,
-    .main-cover-image::after,
-    #last-page,
-    #second-page,
-    #third-page-cover {
-        border-top-right-radius: 40px;
-        border-bottom-right-radius: 40px;
-        border-color: #FFE2E2;
+
+    .book .page:nth-child(even) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-color: #810000;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+        pointer-events: none
+    }
+
+    .main-cover-image,
+    .main-cover-image::after,
+    #third-page-cover,
+    #second-page,
+    #last-page,
+    .book .page:nth-child(odd) {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-color: #810000;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 
     .book,
     .main-content,
     .page,
+    #my-quote,
     #third-page-cover,
-    #last-page{
-        height: 53vw;
+    #last-page {
+        height: 87vh;
     }
 
     .book,
@@ -410,22 +418,88 @@ body {
     }
 
     .page,
+    #my-quote,
     #third-page-cover,
     #last-page {
         width: 40vw;
-        right: 0;
-        border-left: 4px dashed #810000;
+    }
+
+    .page {
+        background-color: rgb(251, 251, 251);
     }
 
     #second-page {
         position: absolute;
     }
 
-    body {
+    .book .page:nth-child(even) {
+        transform-origin: 100% 0;
+        transform: rotateY(180deg);
+    }
+
+    .book .page.flipped:nth-child(odd) {
+        transform: rotateY(-180deg);
+    }
+
+    .book .page.flipped:nth-child(even) {
+        transform-origin: 100% 0;
+        transform: rotateY(0deg);
+        pointer-events: all;
+    }
+
+    .book .page.flipped:nth-child(even):hover {
+        transform: rotateY(23deg);
+    }
+
+    #last-page,
+    .book .page:nth-child(odd) {
+        right: 0;
+    }
+
+    .book .page:nth-child(odd) {
+        border-left: 2px dashed #810000;
+    }
+
+    .book .page:nth-child(even) {
+        border-right: 2px dashed #810000;
+    }
+
+    .book {
+        box-shadow: none;
+        border-left: none;
+    }
+
+    #first-page-back,
+    #second-page-back,
+    #third-page-back {
+        background-color: rgba(255, 255, 255, 0);
         background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #first-page-back{
+        background-image: url(./even-page/LAEM7074.jpg);
+    }
+
+    #second-page-back{
+        background-image: url(./even-page/LAEM7093.jpg);
+    }
+
+    #third-page-back{
+        background-image: url(./even-page/LAEM7103.jpg);
+    }
+
+    body {
+        background-repeat: round;
         background-size: cover;
         overflow: hidden;
         background-image: url(./landscape/background.jpg);
+    }
+
+    .sub-cover-image {
+        bottom: -5%;
+        left: -6%;
+        height: 70%;
     }
 
     .fun-bride-groom {
@@ -436,7 +510,7 @@ body {
     span {
         font-family: 'Lovers Quarrel', cursive;
         text-align: center;
-        font-size: 1vw;
+        font-size: 5vw;
         color: #CE1212;
     }
 
@@ -445,31 +519,23 @@ body {
     }
 
     .time-text {
-        position: absolute;
-        top: -6vw;
-        width: 9vw;
-        height: 1vw;
+        top: 2.4vw;
+        width: 39vw;
     }
 
     .time-text p {
-        line-height: 1vw;
+        line-height: 4.4vw;
     }
 
     .address-text {
-        font-size: 1vw;
-    }
-
-    .sub-address-text {
-        width: 80%;
+        font-size: 2.2vw;
     }
 
     .sub-address-text-a {
-        font-size: 1vw;
-        font-weight: lighter;
+        font-size: 1.3vw;
     }
 
     .sub-address-text-b {
-        font-size: 1vw;
-        font-weight: lighter;
+        font-size: 1.9vw;
     }
 }
