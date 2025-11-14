@@ -46,10 +46,10 @@ function fadeOut(fadeTarget) {
   if (imgIndex > images.length) imgIndex = 0;
   if (!fadeTarget.style.opacity) {
     fadeTarget.style.opacity = 1;
-    fadeTarget.style.backgroundImage = prefix + images[imgIndex++] + "')";
+    fadeTarget.style.backgroundImage = "url('" + prefix + images[imgIndex++] + "')";
   }
   if (fadeTarget.style.opacity < 0) {
-    fadeTarget.style.backgroundImage = prefix + images[imgIndex++] + "')";
+    fadeTarget.style.backgroundImage = "url('" + prefix + images[imgIndex++] + "')";
     fadeTarget.style.opacity = 0;
     isDown = false;
   } else if (fadeTarget.style.opacity > 1) {
