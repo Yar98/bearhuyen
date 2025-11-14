@@ -510,6 +510,10 @@ body {
         background-image: url(./landscape/background.jpg);
     }
 
+    .main-cover-image {
+        background: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/first-page/white-main-cover.jpg);
+    }
+
     .introduction-content,
     .sub-cover-image {
         position: static;
@@ -526,6 +530,10 @@ body {
         height: 90%;
         bottom: -7.4%;
         left: 9.1%;
+    }
+
+    #second-page {
+        background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/second-page/second-page.jpg);
     }
 
     .fun-bride-groom {
