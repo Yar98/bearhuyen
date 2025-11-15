@@ -3,22 +3,37 @@ var images = ['LAEM7099.jpg', 'LAEM7079.jpg', 'LAEM6989.jpg', 'LAEM6976.jpg', 'I
 var imgIndex = 0;
 var delayFlag = 0;
 var curWidth = window.innerWidth;
-var prefixPro = "https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/third-page/";
-var prefixOpti = "https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/third-page-opti/";
-var prefix = prefixOpti;
+var imageUrl = "https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/";
+
+var prefixThirdPagePro = imageUrl + "third-page/";
+var prefixThirdPageOpti = imageUrl + "third-page-opti/";
+var prefixThirdPage = prefixThirdPageOpti;
+
+var prefixSecondPagePro = imageUrl + "second-page/";
+var prefixSecondPageOpti = imageUrl + "second-page-opti/";
+var prefixSecondPage = prefixSecondPageOpti;
+
+var prefixFirstPagePro = imageUrl + "first-page/";
+var prefixFirstPageOpti = imageUrl + "first-page-opti/";
+var prefixFirstPage = prefixSecondPageOpti;
 
 if (curWidth > 700) {
-  prefix = prefixPro;
+  prefixThirdPage = prefixThirdPagePro;
+  prefixSecondPage = prefixSecondPagePro;
+  prefixFirstPage = prefixFirstPagePro;
 }
 
 preloadImages();
 
 function preloadImages() {
   images.map((value) => preloadImage(prefix + value));
-  preloadImage(prefix + "second-page.jpg");
-  preloadImage(prefix + "LAEM7074.jpg");
-  preloadImage(prefix + "LAEM7093.jpg");
-  preloadImage(prefix + "LAEM7103.jpg");
+  preloadImage(prefixSecondPage + "second-page.jpg");
+  if (curWidth > 700) {
+    preloadImage(imageUrl + "even-page/LAEM7074.jpg");
+    preloadImage(imageUrl + "even-page/LAEM7093.jpg");
+    preloadImage(imageUrl + "even-page/LAEM7103.jpg");
+  }
+
 }
 
 function preloadImage(url) {
@@ -26,7 +41,7 @@ function preloadImage(url) {
   img.src = url;
 }
 
-function createHeart() {
+function createHearts() {
   const heart = document.createElement('div');
   heart.classList.add('heart');
 
@@ -42,7 +57,7 @@ function createHeart() {
   }, 5000);
 }
 
-function fadeOut(fadeTarget) {
+function infiniteFadeOut(fadeTarget) {
   if (delayFlag > 0 && delayFlag < 150) {
     delayFlag += 1;
     return;
@@ -58,7 +73,6 @@ function fadeOut(fadeTarget) {
     fadeTarget.style.opacity = 0;
     isDown = false;
   } else if (fadeTarget.style.opacity > 1) {
-    //fadeTarget.style.backgroundImage = "url('./third-page-opti/" + images[imgIndex++] + "')";
     fadeTarget.style.opacity = 1.01;
     isDown = true;
     delayFlag += 1;
@@ -72,19 +86,18 @@ function fadeOut(fadeTarget) {
 }
 
 function multipleFadeOut(fadeTarget, secondFadeTarget) {
-  fadeOut(fadeTarget);
+  infiniteFadeOut(fadeTarget);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var pages = document.getElementsByClassName('page');
+function updateStyle(pages) {
   for (var i = 0; i < pages.length; i++) {
     var page = pages[i];
     if (i % 2 === 0) {
       page.style.zIndex = (pages.length - i);
     }
   }
+
   for (var i = 0; i < pages.length; i++) {
-    //Or var page = pages[i];
     pages[i].pageNum = i + 1;
     pages[i].onclick = function () {
       if (this.pageNum % 2 === 0) {
@@ -104,12 +117,16 @@ document.addEventListener('DOMContentLoaded', function () {
       pages[i].classList.remove('flipped');
     }
   }
+}
 
-  setInterval(createHeart, 700);
+
+document.addEventListener('DOMContentLoaded', function () {
+  var pages = document.getElementsByClassName('page');
+  updateStyle(pages);
+
+  setInterval(createHearts, 700);
 
   var fadeTarget = document.getElementById("third-page-cover");
-  var secondFadeTarget = document.getElementById("my-quote");
-
-  setInterval(function () { multipleFadeOut(fadeTarget, secondFadeTarget) }, 20);
+  setInterval(function () { multipleFadeOut(fadeTarget) }, 20);
 })
 
