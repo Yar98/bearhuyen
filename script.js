@@ -26,7 +26,7 @@ if (curWidth > 700) {
 preloadImages();
 
 function preloadImages() {
-  images.map((value) => preloadImage(prefix + value));
+  images.map((value) => preloadImage(prefixThirdPage + value));
   preloadImage(prefixSecondPage + "second-page.jpg");
   if (curWidth > 700) {
     preloadImage(imageUrl + "even-page/LAEM7074.jpg");
