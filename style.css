@@ -43,6 +43,8 @@
     transition: transform 1.1s;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    cursor: pointer;
+    user-select: none;
 }
 
 .book {
