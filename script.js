@@ -1,9 +1,9 @@
 var isDown = true;
-var images = ['LAEM7099.jpg', 'LAEM7079.jpg', 'LAEM6989.jpg', 'LAEM6976.jpg', 'IMG_2404.jpg', 'IMG_2316.jpg', 'IMG_1928.jpg', 'IMG_2072.jpg'];
 var imgIndex = 0;
 var delayFlag = 0;
 var curWidth = window.innerWidth;
 var imageUrl = "https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/";
+var images = ['LAEM7099.jpg', 'LAEM7079.jpg', 'LAEM6989.jpg', 'LAEM6976.jpg', 'IMG_2404.jpg', 'IMG_2316.jpg', 'IMG_1928.jpg', 'IMG_2072.jpg'];
 
 var prefixThirdPagePro = imageUrl + "third-page/";
 var prefixThirdPageOpti = imageUrl + "third-page-opti/";
@@ -66,10 +66,10 @@ function infiniteFadeOut(fadeTarget) {
   if (imgIndex > images.length) imgIndex = 0;
   if (!fadeTarget.style.opacity) {
     fadeTarget.style.opacity = 1;
-    fadeTarget.style.backgroundImage = "url('" + prefix + images[imgIndex++] + "')";
+    fadeTarget.style.backgroundImage = "url('" + prefixThirdPage + images[imgIndex++] + "')";
   }
   if (fadeTarget.style.opacity < 0) {
-    fadeTarget.style.backgroundImage = "url('" + prefix + images[imgIndex++] + "')";
+    fadeTarget.style.backgroundImage = "url('" + prefixThirdPage + images[imgIndex++] + "')";
     fadeTarget.style.opacity = 0;
     isDown = false;
   } else if (fadeTarget.style.opacity > 1) {
