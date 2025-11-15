@@ -63,15 +63,17 @@ function infiniteFadeOut(fadeTarget) {
     return;
   }
   delayFlag = 0;
-  if (imgIndex > images.length) imgIndex = 0;
+
   if (!fadeTarget.style.opacity) {
     fadeTarget.style.opacity = 1;
     fadeTarget.style.backgroundImage = "url('" + prefixThirdPage + images[imgIndex++] + "')";
+    if (imgIndex > images.length) imgIndex = 0;
   }
   if (fadeTarget.style.opacity < 0) {
     fadeTarget.style.backgroundImage = "url('" + prefixThirdPage + images[imgIndex++] + "')";
     fadeTarget.style.opacity = 0;
     isDown = false;
+    if (imgIndex > images.length) imgIndex = 0;
   } else if (fadeTarget.style.opacity > 1) {
     fadeTarget.style.opacity = 1.01;
     isDown = true;

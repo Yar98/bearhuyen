@@ -305,32 +305,42 @@ body {
 
 
 .fun-bride-groom {
-    position: relative;
-    width: 100vw;
+    width: 90vw;
     height: 6vh;
+    display: flex;
 }
 
 .fun-bride {
+    position: relative;
+    width: 21vw;
+}
+
+.fun-bride img {
     position: absolute;
-    left: 12%;
+    right: 0;
     bottom: 0;
     animation: bride-down 2s 1 forwards;
     animation-delay: 2s;
 }
 
 .fun-groom {
+    position: relative;
+    width: 70vw;
+}
+
+#fun-groom-img {
     position: absolute;
-    right: 3%;
-    bottom: 0;
+    right: 0;
+    bottom: -7%;
     transform-origin: 0 100%;
-    animation: groom-up 3s ease-in-out 1 forwards;
-    animation-delay: 2s;
+    animation: groom-up 3s ease-in 1 forwards;
+    animation-delay: 3s;
 }
 
 .fun-family {
     position: absolute;
-    right: 3%;
-    bottom: 0;
+    right: 0;
+    bottom: -7%;
     opacity: 0;
     animation: family-appear 3s 1 forwards;
     animation-delay: 5s;
@@ -358,23 +368,31 @@ body {
 
 @keyframes groom-up {
     0% {
-        bottom: 0;
+        right: 0;
+        bottom: -7%;
     }
 
-    25% {
+    15% {
+        right: 0;
+        bottom: 10.5%;
         transform: rotate(-90deg);
-        right: 10vw;
+    }
+
+    30% {
+        right: 5%;
+        bottom: 5.5%;
+        transform: rotate(-90deg);
     }
 
     90% {
-        transform: rotate(-100deg);
-        right: 43vw;
-        bottom: -1vh;
+        right: 60%;
+        bottom: -10%;
+        transform: rotate(-90deg);
     }
 
     100% {
-        transform: translateY(20%);
-        right: 65vw;
+        right: 86.5%;
+        bottom: -18%;
     }
 }
 
@@ -532,11 +550,7 @@ body {
         background-image: url(https://cdn.jsdelivr.net/gh/yar98/bearhuyen/image/second-page/second-page.jpg);
     }
 
-    .fun-bride-groom {
-        display: none;
-    }
-
-    #frog{
+    #frog {
         width: 5vw;
         height: 5vw;
     }
